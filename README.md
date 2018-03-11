@@ -1,6 +1,7 @@
 # FeBe CSS Reset
 _A lightweight, stylish reset for rapid deploy_
-[See the demo in action][http://amy.works/febe-css-reset/demo]
+
+[See the demo in action](http://amy.works/febe-css-reset/demo)
 
 ## Why another reset?
 This is a fair question. There are a ton of resets out there. I think the gold standard has generally been Eric Meyer’s CSS Reset or Normalize.css. But these resets are bare bones and just make elements behave the same way. 
@@ -33,4 +34,4 @@ The demo also includes an inline JavaScript goodie. Something that shows up pret
 
 So here’s where I blow your mind: the demo includes a single line of best-practice code for displaying the copyright notice that you can copy and paste into literally any project. No external libraries needed.
 
-[See the demo in action][http://amy.works/febe-css-reset/demo]
+[See the demo in action](http://amy.works/febe-css-reset/demo])
