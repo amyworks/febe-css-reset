@@ -1,4 +1,6 @@
 # FeBe CSS Reset
+_A lightweight, stylish reset for rapid deploy_
+[See the demo in action][http://amy.works/febe-css-reset/demo]
 
 ## Why another reset?
 This is a fair question. There are a ton of resets out there. I think the gold standard has generally been Eric Meyer’s CSS Reset or Normalize.css. But these resets are bare bones and just make elements behave the same way. 
@@ -30,3 +32,5 @@ The demo is used with FeBe CSS Grid to show off what’s possible typographicall
 The demo also includes an inline JavaScript goodie. Something that shows up pretty consistently on Stack Overflow is any variation of the question, “How do I display the current year in a copyright notice?” And usually someone replies, “Oh, you shouldn’t *just* display the current year because that’s bad copyright practice, you should be displaying a year range starting.” 
 
 So here’s where I blow your mind: the demo includes a single line of best-practice code for displaying the copyright notice that you can copy and paste into literally any project. No external libraries needed.
+
+[See the demo in action][http://amy.works/febe-css-reset/demo]
