@@ -6,7 +6,7 @@ This is a fair question. There are a ton of resets out there. I think the gold s
 FeBe CSS Reset is intended to also reset and normalize typographic heuristics and provides a library of helper classes. What you end up with is a reset that’s also ready for rapid-deploy primetime with minimal styling required.
 
 ### Human and Machine Readability
-Most resets don’t take typography or machine readability into account. It’ll reset things like <cite> and <q> but not normalize their typographic display in a meaningful way. This means a lot of designers will use other elements like <b> or <i> or custom classes instead of using machine readable tags that already exist.
+Most resets don’t take typography or machine readability into account. It’ll reset things like `cite` and `q` but not normalize their typographic display in a meaningful way. This means a lot of designers will use other elements like `b` or `i` or custom classes instead of using machine readable tags that already exist.
 
 ### Deprecated Elements / Older Browser Support
 The FeBe CSS Reset keeps deprecated elements separate to make progressive enhancement / graceful degradation easier to control.
