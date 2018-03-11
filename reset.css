@@ -1,8 +1,9 @@
 /* 
 	FeBe Reset
+		VERSION		1.1.0
 		AUTHOR 		Amy Coleman
 		COMPANY		Amy Works
-		URL 		http://amy.works/febe-reset	
+		URL 		http://amy.works/febe-reset
 		GIT REPO	https://github.com/amyworks/febe-reset.git
 		LICENSE		GNU General Public License 3.0
 */
@@ -14,8 +15,8 @@
 		  --HEADING		font-family: 'Merriweather Sans', Helvetica, Arial, sans-serif;
 		  --NORMAL		font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
 
-		  						!! This font library will load slowly. Consider using the Web Font Loader
-		  						   to asynchronously load webfonts for better page speed.
+		  						!! This particular font library will load slowly. Consider using the Web Font 
+		  						   Loader to asynchronously load webfonts for better page speed.
 
 		
 
@@ -51,17 +52,17 @@ table, legend, tbody, thead, tfoot, tr, th, td, ruby {
 	/* Alignment */
 	vertical-align: baseline;
 }
-													/* Deprecated elements */ 
-													center, tt, b, u, i, basefont, font, dir, applet, 
-													isindex, menu, s, strike, plaintext, listing, xmp {
-														/* Margin, padding, border */
-														margin: 0; padding: 0; border: 0;
-														/* Font */
-														font-family:'Merriweather', Georgia, 'Times New Roman', serif; 
-														font-size: 1em;
-														/* Alignment */
-														vertical-align: baseline;
-													}
+									/* Deprecated elements */ 
+									center, tt, b, u, i, basefont, font, dir, applet, 
+									isindex, menu, s, strike, plaintext, listing, xmp {
+										/* Margin, padding, border */
+										margin: 0; padding: 0; border: 0;
+										/* Font */
+										font-family:'Merriweather', Georgia, 'Times New Roman', serif; 
+										font-size: 1em;
+										/* Alignment */
+										vertical-align: baseline;
+									}
 
 /* HTML5 display-role reset for older browsers */
 header, hgroup, footer, nav, section, article, aside, menu, details, figcaption, figure {
@@ -120,7 +121,9 @@ h2 {
 	font-family: 'Merriweather Sans', Helvetica, Arial, sans-serif;
 	font-size:3em;
 	font-weight: normal;
-	padding:30px 0 15px 0;
+	text-align:center;
+	text-transform: uppercase;
+	padding:30px 0;
 }
 h3 {
 	font-family: 'Merriweather Sans', Helvetica, Arial, sans-serif;
@@ -158,10 +161,10 @@ h6 {
    Emphasizing Text
    --------------------------------- */
 strong, b {
-	font-weight:bold; /* change to value >100 or use {font-family: font-name-weight} */
+	font-weight:bold;
 }
 em, i {
-	font-style:italic;  /* change to {font-family: font-name-style} */
+	font-style:italic;
 }
 .underline {
 	text-decoration:underline;
@@ -194,43 +197,49 @@ sub, sup {
 	padding-left:2px;
 }
 sub {  /* subscript styling */
+	font-family: 'Merriweather Sans', Helvetica, Arial, sans-serif;
+	font-size:.75em;
+	line-height: 1;
 	vertical-align:sub;
 }
 sup { /* superscript styling */
+	font-family: 'Merriweather Sans', Helvetica, Arial, sans-serif;
+	font-size:.75em;
+	line-height: 1;
 	vertical-align:super;
 }
+q {
+	quotes:'"' '"' "'" "'";
+}
+q:before {
+	content:open-quote;
+}
+q:after {
+	content:close-quote;
+}
 blockquote {
-	quotes:none;
+	quotes:'"' '"' "'" "'";
+	font-size:1.5em;
+	font-weight: 300;
+	font-style: italic;
+	line-height: 1.5em;
 	padding:30px 20%;
 }
-blockquote:before, blockquote:after {
-	content: none;
-}
-			q {
-				quotes:'"' '"' "'" "'";
-				font-size:1.5em;
-				font-weight: 300;
-				font-style: italic;
-				line-height: 1.5em;
+			blockquote:before, blockquote:after {
+				content: none;
 			}
-			q:before {
-				content:open-quote;
-			}
-			q:after {
-				content:close-quote;
-			}
-			blockquote p {
+			blockquote + p {
 				font-family: 'Merriweather Sans', Helvetica, Arial, sans-serif;
 				font-size:1em;
 				line-height: 1;
-				padding: 10px 0 0 60%;
+				padding: 0 0 0 60%;
 			}
-			blockquote p:last-child {
+			blockquote + p + p {
 				font-size:.75em;
 				font-weight:300;
 				font-style: italic;
-				line-height: 1;
-				padding-top:0;
+				line-height: 1;				
+				padding: 0 0 40px 60%;
 			}
 .highlight {
 	background:#eef441;
@@ -238,15 +247,114 @@ blockquote:before, blockquote:after {
 
 img { /* images will stretch to the width of their parent */
 	max-width:100%;
-	padding: 30px 30px 10px 30px;
+	padding: 10px 0;
 }
 			img + figcaption {
 				font-family: 'Merriweather Sans', Helvetica, Arial, sans-serif;
 				font-size:.75em;
 				line-height: 1;
 				max-width:100%;
-				padding:0 30px 30px 30px;
+				padding:0 0 30px 0;
 			}
+cite { /* ensure cross browser consistency */
+	font-family:'Merriweather', Georgia, 'Times New Roman', serif;
+	font-style:italic;
+}
+			sup > cite, sup > cite > a {
+				font-family: 'Merriweather Sans', Helvetica, Arial, sans-serif;
+				font-style:normal;
+			}
+/* ---------------------------------
+   Forms
+   --------------------------------- */
+form {	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	max-width:100%;
+	padding:30px;
+}
+form > p, label, input, textarea {
+	font-family: 'Merriweather Sans', Helvetica, Arial, sans-serif;
+	font-size:1em;
+}
+form > p {	
+	padding-bottom:5px;
+}
+input, textarea {	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin:10px 0 30px 0;
+	padding:10px;
+	border:1px solid #ccc;	
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+}
+input[type=text], textarea {	
+	display:block;
+	width:100%;
+}
+input[type=radio] {
+	margin-right: 10px;
+}
+			input[type=radio] + label {
+				margin-right:30px;
+			}
+input[type=checkbox] {
+	margin-right: 10px;
+}
+			input[type=checkbox] + label {
+				margin-right:30px;
+			}
+button, input[type=submit], input[type=reset]{
+	border:none;
+	padding:10px 20px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	vertical-align: middle;
+}
+button {
+	background:#333;
+	color:#fff;
+}
+input[type=submit] {
+	background:#4253f4;
+	color:#fff;
+}
+input[type=reset] {
+	font-size:.75em;
+	background:#ccc;
+	color:#fff;
+	margin-left:15px;
+}
+
+/* ---------------------------------
+   Tables
+   --------------------------------- */
+table {
+	margin:0 30px;
+}
+table tr th, table tr td {
+	font-family: 'Merriweather Sans', Helvetica, Arial, sans-serif;
+	font-size:1em;
+}
+tr:nth-child(odd) {
+	background:#fff;
+}
+th, td {
+	padding:15px;
+	vertical-align: middle;
+}
+th {
+	border:1px solid #aaa;
+	background:#bbb;
+}
+td {	
+	border:1px solid #ccc;
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -264,11 +372,14 @@ header.main {
 header.main p {
 	font-style:italic;
 }
+footer.main {
+	margin:30px auto;
+}
 footer.main p {
 	font-family: 'Merriweather Sans', Helvetica, Arial, sans-serif;
 	font-size:.75em;
 	text-align: center;
-	margin:50px 0;
+	padding-bottom: 0;
 }
 footer.main p span {
 	font-family: 'Merriweather Sans', Helvetica, Arial, sans-serif;
@@ -279,23 +390,26 @@ footer.main p span {
 			   Header navigation 
 			   --------------------------------- */
 			header.main nav {
-				margin:30px 0;
+				margin:30px 0 0 0;
 			}
 			header.main nav ul {
 				list-style: none;
-				margin:0 auto;
+				margin:0;
 			}
 			header.main nav ul li {
 				font: 1em/1em 'Merriweather Sans', Helvetica, Arial, sans-serif;
 				text-transform: uppercase;
-				padding:0 50px 0 0;	
-				float:left;
+				text-align:center;
+				padding:0 70px 0 0;	
+				display:inline-block;
 			}
-			header.main nav ul li:last-child{
-				padding:0;
+			header.main nav ul li:nth-last-child(1){
+				padding:0 0 0 0;
 			}
 			header.main nav ul li a {
 				/* color:#(put desired color here); */
+				font: 1em/1em 'Merriweather Sans', Helvetica, Arial, sans-serif;
+				text-transform: uppercase;
 			}
 			header.main nav ul li a:hover {
 				/* color:#(put desired color here); */
@@ -325,3 +439,8 @@ footer.main p span {
 .text-center{text-align:center;}
 .text-right {text-align: right;}
 .padded {padding:30px;}
+.mbp-normalize-sizing { /* normalizes sizing behavior for margins, border, padding for cross-browser predictability */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

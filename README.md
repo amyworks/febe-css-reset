@@ -1,3 +1,3 @@
-# febe-reset
+# febe-css-reset
 
 
